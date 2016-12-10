@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import FacebookLogin
+import FacebookCore
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        /*
+        if let accessToken = AccessToken.current {
+            // User is logged in, use 'accessToken' here.
+        }
+         */
     }
 
     override func didReceiveMemoryWarning() {
