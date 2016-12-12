@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		76BB0A6E7F91950E813171C3 /* Pods_BeaconDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */; };
 		D44AFDED1DFE3CBF00E23EB9 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */; };
+		D44AFDEF1DFE415A00E23EB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDEE1DFE415A00E23EB9 /* Constants.swift */; };
 		D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E21DFC667B0015CD8F /* AppDelegate.swift */; };
 		D4F981E51DFC667B0015CD8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E41DFC667B0015CD8F /* ViewController.swift */; };
 		D4F981E81DFC667B0015CD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F981E61DFC667B0015CD8F /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		672A617E16D609ADB0120EB3 /* Pods-BeaconDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconDemo/Pods-BeaconDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		D44AFDEE1DFE415A00E23EB9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D4F981DF1DFC667B0015CD8F /* BeaconDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F981E21DFC667B0015CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4F981E41DFC667B0015CD8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */,
+				D44AFDEE1DFE415A00E23EB9 /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				D4F981E51DFC667B0015CD8F /* ViewController.swift in Sources */,
 				D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */,
 				D4F981F91DFC68D90015CD8F /* HomeViewController.swift in Sources */,
+				D44AFDEF1DFE415A00E23EB9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

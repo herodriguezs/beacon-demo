@@ -8,6 +8,7 @@
 
 import UIKit
 import FacebookCore
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,14 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.        
-        
-        
+        // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let homeViewController = LoginViewController()
         self.window?.rootViewController = homeViewController
         
         setupAppAppearance()
+        
+        Parse.setApplicationId(Constants.Parse.applicationId, clientKey: Constants.Parse.clientKey)
         
         return ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
