@@ -12,9 +12,9 @@ import FacebookCore
 
 class LoginViewController: UIViewController, LoginButtonDelegate {
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var separatorView: UIView!
+    @IBOutlet weak private var containerView: UIView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var separatorView: UIView!
     
     var loginButton: LoginButton!
 
