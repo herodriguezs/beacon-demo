@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import FacebookLogin
+import FacebookCore
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginButtonDelegate {
+    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var separatorView: UIView!
+    
+    var loginButton: LoginButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.createFacebookLoginButton()
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +29,29 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Private methods
+    
+    private func createFacebookLoginButton() {
+        loginButton = LoginButton.init(frame: nil, readPermissions: [ReadPermission.Email, ReadPermission.PublicProfile])
+        loginButton.delegate = self
+        loginButton.center = self.view.center
+        self.view.addSubview(loginButton)
+        
+        // Add Constraints
+        loginButton.topAnchor.constraintEqualToAnchor(self.separatorView.bottomAnchor, constant: 20).active = true
+    }
+    
+    // MARK: Facebook Login Button Delegate methods
+    
+    func loginButtonDidCompleteLogin(loginButton: LoginButton, result: LoginResult) {
+        // Getting login result failed due to missing shared keychain entitlement.
+        // Fixed on xcode 8.2.
+        
+    }
+    
+    func loginButtonDidLogOut(loginButton: LoginButton) {
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76BB0A6E7F91950E813171C3 /* Pods_BeaconDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */; };
+		D44AFDED1DFE3CBF00E23EB9 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */; };
 		D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E21DFC667B0015CD8F /* AppDelegate.swift */; };
 		D4F981E51DFC667B0015CD8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E41DFC667B0015CD8F /* ViewController.swift */; };
 		D4F981E81DFC667B0015CD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F981E61DFC667B0015CD8F /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		672A617E16D609ADB0120EB3 /* Pods-BeaconDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconDemo/Pods-BeaconDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		D4F981DF1DFC667B0015CD8F /* BeaconDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F981E21DFC667B0015CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4F981E41DFC667B0015CD8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D44AFDEB1DFE3CA100E23EB9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		D4F981D61DFC667B0015CD8F = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				D4F981E21DFC667B0015CD8F /* AppDelegate.swift */,
+				D44AFDEB1DFE3CA100E23EB9 /* Util */,
 				D4F981F51DFC681F0015CD8F /* Controllers */,
 				D4F981F61DFC68240015CD8F /* Models */,
 				D4F981FB1DFC6AC10015CD8F /* Frameworks */,
@@ -167,6 +178,7 @@
 				TargetAttributes = {
 					D4F981DE1DFC667B0015CD8F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -256,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44AFDED1DFE3CBF00E23EB9 /* AccountManager.swift in Sources */,
 				D4F982001DFC77790015CD8F /* LoginViewController.swift in Sources */,
 				D4F981E51DFC667B0015CD8F /* ViewController.swift in Sources */,
 				D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */,
@@ -383,6 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.BeaconDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -399,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.BeaconDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
