@@ -10,4 +10,5 @@ target 'BeaconDemo' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Parse'
+  pod 'ParseFacebookUtilsV4'
 end
