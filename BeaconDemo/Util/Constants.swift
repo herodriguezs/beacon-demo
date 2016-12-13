@@ -26,7 +26,11 @@ class Constants {
     
     struct CellIdentifiers {
         static let tableViewCell = "kTableViewCellIdentifier"
-        static let userHeaderTableViewCell = "kUserHeaderTableViewCellIdentifier"
         static let starsDetailTableViewCell = "kStarsDetailTableViewCellIdentifier"
+    }
+    
+    struct Messages {
+        static let defaultError = "Ocurrió un error ineseperado. Intenta nuevamente."
+        static let noStarsError = "Todavía no has ganado estrellas :( Acercate a un beacon para comenzar a ganar!"
     }
 }

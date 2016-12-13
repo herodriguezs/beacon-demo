@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		76BB0A6E7F91950E813171C3 /* Pods_BeaconDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */; };
-		D41CE6BA1DFE55FA001AA9BC /* UserHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41CE6B81DFE55FA001AA9BC /* UserHeaderTableViewCell.swift */; };
-		D41CE6BB1DFE55FA001AA9BC /* UserHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41CE6B91DFE55FA001AA9BC /* UserHeaderTableViewCell.xib */; };
 		D41CE6BE1DFE5620001AA9BC /* StarsDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41CE6BC1DFE5620001AA9BC /* StarsDetailTableViewCell.swift */; };
 		D41CE6BF1DFE5620001AA9BC /* StarsDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41CE6BD1DFE5620001AA9BC /* StarsDetailTableViewCell.xib */; };
-		D44AFDED1DFE3CBF00E23EB9 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */; };
 		D44AFDEF1DFE415A00E23EB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDEE1DFE415A00E23EB9 /* Constants.swift */; };
 		D44AFDF51DFE4DF900E23EB9 /* BDBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDF41DFE4DF900E23EB9 /* BDBusiness.swift */; };
+		D47E93C81DFF8BA000C072DC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E93C71DFF8BA000C072DC /* Util.swift */; };
+		D47E93CC1DFF95E700C072DC /* BDStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E93CB1DFF95E700C072DC /* BDStars.swift */; };
 		D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E21DFC667B0015CD8F /* AppDelegate.swift */; };
 		D4F981E51DFC667B0015CD8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E41DFC667B0015CD8F /* ViewController.swift */; };
 		D4F981E81DFC667B0015CD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F981E61DFC667B0015CD8F /* Main.storyboard */; };
@@ -29,13 +28,12 @@
 /* Begin PBXFileReference section */
 		672A617E16D609ADB0120EB3 /* Pods-BeaconDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeaconDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeaconDemo/Pods-BeaconDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeaconDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D41CE6B81DFE55FA001AA9BC /* UserHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		D41CE6B91DFE55FA001AA9BC /* UserHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		D41CE6BC1DFE5620001AA9BC /* StarsDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsDetailTableViewCell.swift; sourceTree = "<group>"; };
 		D41CE6BD1DFE5620001AA9BC /* StarsDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarsDetailTableViewCell.xib; sourceTree = "<group>"; };
-		D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		D44AFDEE1DFE415A00E23EB9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D44AFDF41DFE4DF900E23EB9 /* BDBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDBusiness.swift; sourceTree = "<group>"; };
+		D47E93C71DFF8BA000C072DC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		D47E93CB1DFF95E700C072DC /* BDStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDStars.swift; sourceTree = "<group>"; };
 		D4F981DF1DFC667B0015CD8F /* BeaconDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F981E21DFC667B0015CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4F981E41DFC667B0015CD8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,8 +71,8 @@
 		D44AFDEB1DFE3CA100E23EB9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				D44AFDEC1DFE3CBF00E23EB9 /* AccountManager.swift */,
 				D44AFDEE1DFE415A00E23EB9 /* Constants.swift */,
+				D47E93C71DFF8BA000C072DC /* Util.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -82,8 +80,6 @@
 		D44AFDF61DFE519E00E23EB9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D41CE6B81DFE55FA001AA9BC /* UserHeaderTableViewCell.swift */,
-				D41CE6B91DFE55FA001AA9BC /* UserHeaderTableViewCell.xib */,
 				D41CE6BC1DFE5620001AA9BC /* StarsDetailTableViewCell.swift */,
 				D41CE6BD1DFE5620001AA9BC /* StarsDetailTableViewCell.xib */,
 			);
@@ -149,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D44AFDF41DFE4DF900E23EB9 /* BDBusiness.swift */,
+				D47E93CB1DFF95E700C072DC /* BDStars.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,7 +232,6 @@
 				D4F982011DFC77790015CD8F /* LoginViewController.xib in Resources */,
 				D4F981ED1DFC667B0015CD8F /* LaunchScreen.storyboard in Resources */,
 				D4F981EA1DFC667B0015CD8F /* Assets.xcassets in Resources */,
-				D41CE6BB1DFE55FA001AA9BC /* UserHeaderTableViewCell.xib in Resources */,
 				D4F981E81DFC667B0015CD8F /* Main.storyboard in Resources */,
 				D4F981FA1DFC68D90015CD8F /* HomeViewController.xib in Resources */,
 			);
@@ -296,13 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44AFDED1DFE3CBF00E23EB9 /* AccountManager.swift in Sources */,
 				D4F982001DFC77790015CD8F /* LoginViewController.swift in Sources */,
+				D47E93C81DFF8BA000C072DC /* Util.swift in Sources */,
 				D44AFDF51DFE4DF900E23EB9 /* BDBusiness.swift in Sources */,
-				D41CE6BA1DFE55FA001AA9BC /* UserHeaderTableViewCell.swift in Sources */,
 				D4F981E51DFC667B0015CD8F /* ViewController.swift in Sources */,
 				D41CE6BE1DFE5620001AA9BC /* StarsDetailTableViewCell.swift in Sources */,
 				D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */,
+				D47E93CC1DFF95E700C072DC /* BDStars.swift in Sources */,
 				D4F981F91DFC68D90015CD8F /* HomeViewController.swift in Sources */,
 				D44AFDEF1DFE415A00E23EB9 /* Constants.swift in Sources */,
 			);

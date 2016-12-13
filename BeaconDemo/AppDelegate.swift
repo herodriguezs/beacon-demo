@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Private methods
     
-    func setupAppAppearance() {
+    private func setupAppAppearance() {
         UINavigationBar.appearance().barTintColor = Constants.Colors.green
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : Constants.Colors.white]
@@ -26,18 +26,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
     }
     
+    private func registerParseSubclasses() {
+        BDBusiness.registerSubclass()
+        BDStars.registerSubclass()
+    }
+    
+    // MARK: Public methods
+    
+    func showLoginViewController() {
+        let loginViewController = LoginViewController()
+        self.window?.rootViewController = loginViewController
+    }
+    
+    func showHomeViewController() {
+        let homeViewController = HomeViewController()
+        self.window?.rootViewController = homeViewController
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let homeViewController = HomeViewController()
-        self.window?.rootViewController = homeViewController
         
+        // Setup app appearance
         setupAppAppearance()
         
-        BDBusiness.registerSubclass()
+        // Register Parse classes
+        self.registerParseSubclasses()
         
+        // Parse init
         Parse.setApplicationId(Constants.Parse.applicationId, clientKey: Constants.Parse.clientKey)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+            
+        if Util.loggedIn() {
+            self.showHomeViewController()
+        } else {
+            self.showLoginViewController()
+        }
         
         return ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }

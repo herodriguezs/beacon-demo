@@ -9,6 +9,7 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import ParseFacebookUtilsV4
 
 class LoginViewController: UIViewController, LoginButtonDelegate {
     
@@ -44,9 +45,16 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
     // MARK: Facebook Login Button Delegate methods
     
     func loginButtonDidCompleteLogin(loginButton: LoginButton, result: LoginResult) {
-        // Getting login result failed due to missing shared keychain entitlement.
-        // Fixed on xcode 8.2.
-        
+        let accessToken = FBSDKAccessToken.currentAccessToken()
+        PFFacebookUtils.logInInBackgroundWithAccessToken(accessToken, block: {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.showHomeViewController()
+            } else {
+                Util.showAlert(withMessage: Constants.Messages.defaultError, inViewController: self)
+            }
+        })
     }
     
     func loginButtonDidLogOut(loginButton: LoginButton) {
