@@ -8,7 +8,7 @@ target 'BeaconDemo' do
   # Pods for BeaconDemo
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  pod 'FacebookShare'
   pod 'Parse'
   pod 'ParseFacebookUtilsV4'
+  pod 'EstimoteSDK'
 end
