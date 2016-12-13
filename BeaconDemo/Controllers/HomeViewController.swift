@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIdentifiers.tableViewCell)
         self.tableView.registerNib(UINib.init(nibName:"StarsDetailTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: Constants.CellIdentifiers.starsDetailTableViewCell)
         self.setupUserInfo()
+        self.addObservers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +39,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.userProfileImageView.layer.cornerRadius = self.userProfileImageView.bounds.size.width / 2
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.removeObservers()
     }
     
     // MARK: Private methods
@@ -116,6 +122,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    private func addObservers() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(handleDidEnterRegion), name: Constants.Notifications.didEnterBeaconRegion, object: nil)
+    }
+    
+    private func removeObservers() {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    @objc private func handleDidEnterRegion() {
+        NSLog("Did enter beacon region!")
     }
     
     // MARK: UITableView Delegate methods

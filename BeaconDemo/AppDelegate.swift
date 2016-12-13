@@ -12,9 +12,10 @@ import Parse
 import ParseFacebookUtilsV4
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
+    let beaconManager = ESTBeaconManager()
     
     // MARK: Private methods
     
@@ -31,6 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BDStars.registerSubclass()
     }
     
+    private func setupEstimote() {
+        self.beaconManager.delegate = self
+        self.beaconManager.requestAlwaysAuthorization()
+        self.beaconManager.startMonitoringForRegion(CLBeaconRegion(
+            proximityUUID: NSUUID(UUIDString: "8492E75F-4FD6-469D-B132-043FE94921D8")!,
+            major: 3724, minor: 19987, identifier: "monitored region"))
+    }
+    
     // MARK: Public methods
     
     func showLoginViewController() {
@@ -41,6 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func showHomeViewController() {
         let homeViewController = HomeViewController()
         self.window?.rootViewController = homeViewController
+    }
+    
+    // MARK: Estimote delegate methods
+    
+    func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
+        NSLog("Did enter beacon region")
+        NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.didEnterBeaconRegion, object: nil)
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -56,7 +72,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Parse init
         Parse.setApplicationId(Constants.Parse.applicationId, clientKey: Constants.Parse.clientKey)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-            
+        
+        // Estimote Beacon Manager
+        self.setupEstimote()
+        
         if Util.loggedIn() {
             self.showHomeViewController()
         } else {

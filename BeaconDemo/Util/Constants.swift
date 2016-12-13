@@ -33,4 +33,8 @@ class Constants {
         static let defaultError = "Ocurrió un error ineseperado. Intenta nuevamente."
         static let noStarsError = "Todavía no has ganado estrellas :( Acercate a un beacon para comenzar a ganar!"
     }
+    
+    struct Notifications {
+        static let didEnterBeaconRegion = "kdidEnterBeaconRegion"
+    }
 }
