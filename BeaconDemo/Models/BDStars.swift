@@ -11,9 +11,9 @@ import Parse
 
 class BDStars: PFObject, PFSubclassing {
 
-    @NSManaged var amount : Float
+    @NSManaged var amount : Int
     @NSManaged var user : PFUser
-    @NSManaged var business : BDBusiness
+    @NSManaged var businessId : Int
     
     override class func initialize() {
         struct Static {

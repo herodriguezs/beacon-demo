@@ -15,7 +15,7 @@ import ParseFacebookUtilsV4
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
-    let beaconManager = ESTBeaconManager()
+    private let beaconManager = ESTBeaconManager()
     
     // MARK: Private methods
     
@@ -35,9 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     private func setupEstimote() {
         self.beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
-        self.beaconManager.startMonitoringForRegion(CLBeaconRegion(
-            proximityUUID: NSUUID(UUIDString: "8492E75F-4FD6-469D-B132-043FE94921D8")!,
-            major: 3724, minor: 19987, identifier: "monitored region"))
     }
     
     // MARK: Public methods
@@ -52,11 +49,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         self.window?.rootViewController = homeViewController
     }
     
+    func startMonitoringRegion () {
+        self.beaconManager.startMonitoringForRegion(CLBeaconRegion(proximityUUID: NSUUID(UUIDString:"8492E75F-4FD6-469D-B132-043FE94921D8")!, major: 3724, minor: 19987, identifier: "monitored region"))
+
+    }
+    
     // MARK: Estimote delegate methods
     
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
-        NSLog("Did enter beacon region")
         NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.didEnterBeaconRegion, object: nil)
+    }
+    
+    func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
+        NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.didExitBeaconRegion, object: nil)
+    }
+    
+    func beaconManager(manager: AnyObject, didDetermineState state: CLRegionState, forRegion region: CLBeaconRegion) {
+        NSLog("State \(state)")
+        var notificationName : String
+        switch state {
+        case .Inside:
+            notificationName = Constants.Notifications.insideBeaconRegion
+            break
+            
+        case .Outside:
+            notificationName = Constants.Notifications.outsideBeaconRegion
+            break
+            
+        case .Unknown:
+            notificationName = Constants.Notifications.unknownBeaconRegion
+            break
+        }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(notificationName, object: nil)
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

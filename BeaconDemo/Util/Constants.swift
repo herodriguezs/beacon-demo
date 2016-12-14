@@ -32,9 +32,15 @@ class Constants {
     struct Messages {
         static let defaultError = "Ocurrió un error ineseperado. Intenta nuevamente."
         static let noStarsError = "Todavía no has ganado estrellas :( Acercate a un beacon para comenzar a ganar!"
+        static let winButtonEnabled = "¡Presiona aquí para ganar!"
+        static let winButtonDisabled = "No hay beacons cerca :("
     }
     
     struct Notifications {
         static let didEnterBeaconRegion = "kdidEnterBeaconRegion"
+        static let didExitBeaconRegion = "kdidExitBeaconRegion"
+        static let insideBeaconRegion = "kinsideBeaconRegion"
+        static let outsideBeaconRegion = "koutsideBeaconRegion"
+        static let unknownBeaconRegion = "kunknownBeaconRegion"
     }
 }

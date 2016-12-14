@@ -12,6 +12,8 @@
 		D41CE6BF1DFE5620001AA9BC /* StarsDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41CE6BD1DFE5620001AA9BC /* StarsDetailTableViewCell.xib */; };
 		D44AFDEF1DFE415A00E23EB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDEE1DFE415A00E23EB9 /* Constants.swift */; };
 		D44AFDF51DFE4DF900E23EB9 /* BDBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44AFDF41DFE4DF900E23EB9 /* BDBusiness.swift */; };
+		D45F99EF1E00ECF40056F87D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45F99EE1E00ECF40056F87D /* SystemConfiguration.framework */; };
+		D45F99F11E00ECFA0056F87D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45F99F01E00ECFA0056F87D /* CoreGraphics.framework */; };
 		D47E93C81DFF8BA000C072DC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E93C71DFF8BA000C072DC /* Util.swift */; };
 		D47E93CC1DFF95E700C072DC /* BDStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E93CB1DFF95E700C072DC /* BDStars.swift */; };
 		D4F981E31DFC667B0015CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F981E21DFC667B0015CD8F /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		D41CE6BD1DFE5620001AA9BC /* StarsDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarsDetailTableViewCell.xib; sourceTree = "<group>"; };
 		D44AFDEE1DFE415A00E23EB9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D44AFDF41DFE4DF900E23EB9 /* BDBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDBusiness.swift; sourceTree = "<group>"; };
+		D45F99EE1E00ECF40056F87D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D45F99F01E00ECFA0056F87D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D47E93C71DFF8BA000C072DC /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D47E93CB1DFF95E700C072DC /* BDStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDStars.swift; sourceTree = "<group>"; };
 		D47E93CD1DFFB49500C072DC /* BeaconDemo-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeaconDemo-bridging-header.h"; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45F99F11E00ECFA0056F87D /* CoreGraphics.framework in Frameworks */,
+				D45F99EF1E00ECF40056F87D /* SystemConfiguration.framework in Frameworks */,
 				76BB0A6E7F91950E813171C3 /* Pods_BeaconDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +68,8 @@
 		0085B11F2A53254E491BE993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D45F99F01E00ECFA0056F87D /* CoreGraphics.framework */,
+				D45F99EE1E00ECF40056F87D /* SystemConfiguration.framework */,
 				C307C6499428290965E30AE2 /* Pods_BeaconDemo.framework */,
 			);
 			name = Frameworks;
@@ -201,6 +209,7 @@
 					D4F981DE1DFC667B0015CD8F = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -414,14 +423,18 @@
 			baseConfigurationReference = 672A617E16D609ADB0120EB3 /* Pods-BeaconDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BeaconDemo/Frameworks",
 				);
 				INFOPLIST_FILE = BeaconDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = demo.BeaconDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.beaconDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeaconDemo/BeaconDemo-bridging-header.h";
 				SWIFT_VERSION = 2.3;
 			};
@@ -432,14 +445,17 @@
 			baseConfigurationReference = E2BEE646C1BC39385DA8ED20 /* Pods-BeaconDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BeaconDemo/Frameworks",
 				);
 				INFOPLIST_FILE = BeaconDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = demo.BeaconDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.beaconDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeaconDemo/BeaconDemo-bridging-header.h";
 				SWIFT_VERSION = 2.3;
 			};

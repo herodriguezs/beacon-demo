@@ -68,6 +68,10 @@
                     <constraint firstItem="VWP-kD-0VH" firstAttribute="centerY" secondItem="Hwk-hk-2jC" secondAttribute="centerY" id="yXL-f5-vWg"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="businessNameLabel" destination="VWP-kD-0VH" id="Q9K-5k-H3W"/>
+                <outlet property="starsAmountLabel" destination="tmz-CF-Cxt" id="d9T-Pp-e6O"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

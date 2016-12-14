@@ -18,7 +18,8 @@ class Util {
     
     // show alert message.
     class func showAlert(withMessage message: String, inViewController viewController: UIViewController) {
-        let alertController = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController.init(title: NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String
+, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         let okAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
         alertController.addAction(okAction)
         viewController.presentViewController(alertController, animated: true, completion: nil)

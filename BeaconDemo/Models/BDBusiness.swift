@@ -12,6 +12,8 @@ import Parse
 class BDBusiness: PFObject, PFSubclassing {
     
     @NSManaged var name: String
+    @NSManaged var id: Int
+
     
     override class func initialize() {
         struct Static {
