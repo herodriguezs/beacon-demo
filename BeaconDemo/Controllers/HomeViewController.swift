@@ -447,20 +447,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             })
         }
-        
-       
-        let query = PFQuery(className: BDBusiness.parseClassName())
-        query.whereKey("id", equalTo: Int(randomBusinessId))
-        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) in
-            if error == nil && objects?.count > 0 {
-                if let object : PFObject = objects?[0] {
-                    self.currentBusiness = object as! BDBusiness
-                } else {
-                    self.currentBusiness.name = "Comercio \(self.currentBusiness.id)"
-                }
-            }
-        }
     }
+    
+    @IBAction private func logoutButtonPressed(sender: AnyObject) {
+        let alertController = UIAlertController(title: "", message: "¿Está seguro que desea cerrar sesión?", preferredStyle: .ActionSheet)
+        let logoutAction = UIAlertAction(title: "Cerrar Sesión", style: .Destructive) { (action : UIAlertAction) in
+            PFUser.logOut()
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.showLoginViewController()
+        }
+        alertController.addAction(logoutAction)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel, handler:nil)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true) {}
+    }
+    
     
     /*
     // MARK: - Navigation

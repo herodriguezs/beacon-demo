@@ -38,6 +38,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-BQ-zXh">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRq-HW-VsA">
+                            <rect key="frame" x="310" y="36" width="49" height="28"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <state key="normal" title="Log Out">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="-1" eventType="touchUpInside" id="F0m-42-Ckh"/>
+                            </connections>
+                        </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3k-WQ-ZP1">
                             <rect key="frame" x="137" y="36" width="100" height="100"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,7 +92,9 @@
                         <constraint firstItem="jQJ-Tz-czN" firstAttribute="centerX" secondItem="y3k-WQ-ZP1" secondAttribute="centerX" id="UEG-YZ-wI5"/>
                         <constraint firstAttribute="bottom" secondItem="MHk-hZ-YGa" secondAttribute="bottom" constant="25" id="Uy4-X5-0e1"/>
                         <constraint firstItem="krH-Ks-ZhF" firstAttribute="centerX" secondItem="y3k-WQ-ZP1" secondAttribute="centerX" id="mrH-v4-PLR"/>
+                        <constraint firstItem="cRq-HW-VsA" firstAttribute="top" secondItem="Hz7-BQ-zXh" secondAttribute="top" constant="36" id="n0H-8a-KGH"/>
                         <constraint firstItem="jQJ-Tz-czN" firstAttribute="top" secondItem="y3k-WQ-ZP1" secondAttribute="bottom" constant="16" id="ou3-ZN-nVx"/>
+                        <constraint firstAttribute="trailing" secondItem="cRq-HW-VsA" secondAttribute="trailing" constant="16" id="sRm-hz-N4l"/>
                         <constraint firstItem="krH-Ks-ZhF" firstAttribute="centerY" secondItem="y3k-WQ-ZP1" secondAttribute="centerY" id="yKf-QB-paK"/>
                         <constraint firstItem="y3k-WQ-ZP1" firstAttribute="top" secondItem="Hz7-BQ-zXh" secondAttribute="top" constant="36" id="yf9-Ga-tuj"/>
                     </constraints>
